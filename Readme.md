@@ -1,4 +1,3 @@
-```markdown
 # Scroll-Interactive 3D Website with Three.js
 
 This project demonstrates how to integrate a 3D object into a website that reacts to user scroll events. It uses Three.js to render a GLB model in a fixed background while the website’s content scrolls in the foreground. The project also shows how to center a model’s pivot point, adjust the camera, and rotate the object based on scroll.
