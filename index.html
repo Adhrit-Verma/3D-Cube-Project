@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Scroll Interactive 3D Page</title>
+    <style>
+      /* Basic resets */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        font-family: sans-serif;
+        height: 100%;
+      }
+
+      /* Container for the 3D background */
+      #bg-container {
+        position: fixed;      /* Stays in the same place even when page scrolls */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;         /* Behind all other content */
+        overflow: hidden;    /* Hide any overflow from the canvas */
+      }
+
+      /* Foreground content container */
+      .content {
+        position: relative;
+        min-height: 200vh;  /* Make the page tall so we can scroll */
+        padding: 2rem;
+      }
+
+      header, footer {
+        background: #333;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        max-width: 600px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Fixed 3D background container -->
+    <div id="bg-container"></div>
+
+    <!-- Foreground website content -->
+    <header>
+      <h1>Scroll-Interactive 3D Page</h1>
+    </header>
+
+    <div class="content">
+      <h2>Introduction</h2>
+      <p>
+        This page demonstrates how you can combine a 3D scene in the background
+        with a scrollable foreground. As you scroll down, watch the 3D model or
+        camera respond in the background.
+      </p>
+
+      <h2>Some More Content</h2>
+      <p>
+        Keep scrolling to see more. The background 3D scene will keep animating
+        based on how far you’ve scrolled. This technique can be used to create
+        parallax effects, dynamic backgrounds, or interactive storytelling
+        experiences.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus 
+        efficitur nisl nec faucibus egestas. Donec non tortor in libero pretium 
+        euismod sed at orci. Nullam pellentesque, nunc at consequat molestie, 
+        nisl libero efficitur metus, ac egestas magna elit a turpis.
+      </p>
+
+      <p>
+        Curabitur sed leo vestibulum, semper eros ac, volutpat magna. Sed 
+        facilisis convallis nunc, a auctor nunc interdum sed. In eleifend 
+        dapibus quam, sit amet condimentum ante convallis vitae.
+      </p>
+    </div>
+
+    <footer>
+      <p>© 2025 Scroll-Interactive 3D Page</p>
+    </footer>
+
+    <!-- Link to your Three.js code -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
